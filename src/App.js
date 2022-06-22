@@ -1,22 +1,13 @@
 import logo from './logo.svg';
-import './App.css';
+import InstaFeed from './InstaFeed';
 
 function App() {
+  // console.log(process.env.REACT_APP_ACCESS_TOKEN)
+  // console.log(process.env.NODE_ENV)
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <InstaFeed token={process.env.REACT_APP_ACCESS_TOKEN} limit={20}/>
       </header>
     </div>
   );
